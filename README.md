@@ -1,4 +1,4 @@
 test-logger
 =============
 
-Simple logger class. Debug, info, warning, error messages with timestamp and history support.
+Simple logger class for client and server js. Debug, info, warning, error messages with timestamp and history support.
