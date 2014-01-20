@@ -1,0 +1,35 @@
+{
+  "name": "test-logger",
+  "version": "0.0.1",
+  "description": "Simple logger class for client and server js. Debug, info, warning, error messages with timestamp and history support.",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dkiyatkin/test-logger.git"
+  },
+  "keywords": [
+    "logger",
+    "browser",
+    "client",
+    "timestamp",
+    "history",
+    "class",
+    "server"
+  ],
+  "author": "Dmitriy Kiyatkin <info@dkiyatkin.com> (http://dkiyatkin.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dkiyatkin/test-logger/issues"
+  },
+  "homepage": "https://github.com/dkiyatkin/test-logger",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-nodeunit": "~0.2.2",
+    "grunt-umd": "~1.6.1",
+    "grunt-contrib-coffee": "~0.8.2",
+    "grunt-contrib-uglify": "~0.3.1"
+  }
+}
