@@ -2,7 +2,7 @@
   "name": "test-logger",
   "repo": "dkiyatkin/test-logger",
   "description": "Simple logger class for client and server js. Debug, info, warning, error messages with timestamp, history and quiet mode support.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [
     "logger",
     "browser",

@@ -1,6 +1,6 @@
 {
   "name": "test-logger",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple logger class for client and server js. Debug, info, warning, error messages with timestamp and history support.",
   "main": "index.js",
   "scripts": {
