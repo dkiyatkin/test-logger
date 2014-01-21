@@ -40,3 +40,40 @@ console.log(myApp.log.history) # -> all logs
 ```
 
 #API
+
+##new Logger(options)
+- `options` Object, Optional, Default: {} - values by default.
+- `options.logger` String, Optional, Default: 'WARNING' - logger by default, available: 'ERROR', 'WARNING', 'INFO', 'DEBUG'.
+- `options.quiet` Boolean, Default: false - quiet mode.
+
+###log.debug(msg...)
+- `msg` String - Message to output.
+- Return: String - Message.
+Any text for debug output.
+
+###log.info(msg...)
+- `msg` String - Message to output.
+- Return: String - Message.
+Any text for info output.
+
+###log.warn(msg...)
+- `msg` String - Message to output.
+- Return: String - Message.
+Any text for warn output.
+
+###log.error(msg...)
+- `msg` String - Message to output.
+- Return: String - Message.
+Any text for error output.
+
+###log.history
+- String
+Get log history.
+
+###log.logger
+- String
+Set/Get log level. Available: 'ERROR', 'WARNING', 'INFO', 'DEBUG'.
+
+###log.quiet
+- Boolean
+Set/Get log quiet mode.

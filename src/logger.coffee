@@ -59,22 +59,22 @@ class Logger
       ###
       quiet: @options.quiet || false
       ###*
-      * @param {...string} msg Anything text for debug output.
+      * @param {...string} msg Any text for debug output.
       * @return {string}
       ###
       debug: (msg...) -> _log(msg, 3, @)
       ###*
-      * @param {...string} msg Anything text for info output.
+      * @param {...string} msg Any text for info output.
       * @return {string}
       ###
       info: (msg...) -> _log(msg, 2, @)
       ###*
-      * @param {...string} msg Anything text for warn output.
+      * @param {...string} msg Any text for warn output.
       * @return {string}
       ###
       warn: (msg...) -> _log(msg, 1, @)
       ###*
-      * @param {...string} msg Anything text for error output.
+      * @param {...string} msg Any text for error output.
       * @return {string}
       ###
       error: (msg...) -> _log(msg, 0, @)
