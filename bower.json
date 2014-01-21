@@ -1,0 +1,20 @@
+{
+  "name": "test-logger",
+  "main": "dist/logger.min.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/dkiyatkin/test-logger",
+  "authors": [
+    "Dmitriy Kiyatkin <info@dkiyatkin.com> (http://dkiyatkin.com/)"
+  ],
+  "description": "Simple logger class for client and server js. Debug, info, warning, error messages with timestamp and history support.",
+  "keywords": [
+    "logger",
+    "browser",
+    "client",
+    "timestamp",
+    "history",
+    "class",
+    "server"
+  ],
+  "license": "MIT"
+}
