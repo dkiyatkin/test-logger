@@ -59,7 +59,7 @@ Any text for info output.
 ###log.warn(msg...)
 - `msg` String - Message to output.
 - Return: String - Message.
-Any text for warn output.
+Any text for warning output.
 
 ###log.error(msg...)
 - `msg` String - Message to output.
