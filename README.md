@@ -49,31 +49,38 @@ console.log(myApp.log.history) # -> all logs
 ###log.debug(msg...)
 - `msg` String - Message to output.
 - Return: String - Message.
+
 Any text for debug output.
 
 ###log.info(msg...)
 - `msg` String - Message to output.
 - Return: String - Message.
+
 Any text for info output.
 
 ###log.warn(msg...)
 - `msg` String - Message to output.
 - Return: String - Message.
+
 Any text for warning output.
 
 ###log.error(msg...)
 - `msg` String - Message to output.
 - Return: String - Message.
+
 Any text for error output.
 
 ###log.history
 - String
+
 Get log history.
 
 ###log.logger
 - String
+
 Set/Get log level. Available: 'ERROR', 'WARNING', 'INFO', 'DEBUG'.
 
 ###log.quiet
 - Boolean
+
 Set/Get log quiet mode.
