@@ -3,22 +3,49 @@ module.exports = (grunt) ->
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
     nodeunit: [ 'test/logger.coffee' ]
+    replace:
+      dist:
+        options:
+          force: true,
+          patterns: [
+            {
+              match: /module\.exports.+/,
+              replacement: '',
+              expression: true
+            }
+            {
+              match: /^###\! \@license[\s\S]+?###/,
+              replacement: '',
+              expression: true
+            }
+          ]
+        files: [
+          {src: ['src/logger.coffee'], dest: 'build/logger.coffee'}
+        ]
     coffee:
         compile:
           files:
-            'dist/logger.min.js': 'src/logger.coffee'
+            'build/logger.coffee.js': 'build/logger.coffee'
+          options:
+            bare: true
     umd:
       all:
-        src: 'dist/logger.min.js'
-        dest: 'dist/logger.min.js'
+        src: 'build/logger.coffee.js'
+        dest: 'build/logger.coffee.umd.js'
+        objectToExport: 'Logger'
     uglify:
-      options:
-        banner: banner
-      my_target:
+      min:
+        options:
+          mangle:
+            except: ['Logger']
+          banner: banner
         files:
-          'dist/logger.min.js': ['dist/logger.min.js']
+          'dist/logger.min.js': ['build/logger.coffee.umd.js']
+    clean: ['build']
   grunt.loadNpmTasks('grunt-contrib-nodeunit')
   grunt.loadNpmTasks('grunt-contrib-coffee')
   grunt.loadNpmTasks('grunt-umd')
   grunt.loadNpmTasks('grunt-contrib-uglify')
-  grunt.registerTask('default', ['nodeunit', 'coffee', 'umd', 'uglify'])
+  grunt.loadNpmTasks('grunt-replace')
+  grunt.loadNpmTasks('grunt-contrib-clean')
+  grunt.registerTask('default', ['nodeunit', 'replace', 'coffee', 'umd', 'uglify:min', 'clean'])
